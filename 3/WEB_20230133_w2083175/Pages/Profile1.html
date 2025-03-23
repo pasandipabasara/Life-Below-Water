@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Underwater World Profile</title>
+    <link rel="stylesheet" href="../Style/Profile.css">
+    <link rel="stylesheet" href="../Style/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Js/nav.js">
+    <style>
+        .signup-page {
+            width: 1000px;
+            margin: auto;
+            text-align: center;
+            padding: 100px 0;
+            color: #fff;
+        }
+        .signup-page h2 {
+            font-family: 'Times New Roman', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .signup-form {
+            width: 400px;
+            background: rgba(0, 0, 50, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            margin: auto;
+            text-align: left;
+        }
+        .signup-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ff7200;
+        }
+        .signup-form input {
+            width: calc(100% - 20px);
+            height: 35px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ff7200;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+        }
+        .signup-form input:focus {
+            outline: none;
+        }
+        .signup-form input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background: #ff7200;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .signup-form input[type="submit"]:hover {
+            background: #fff;
+            color: #ff7200;
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff7200;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .navigation a:hover {
+            background-color: #fff;
+            color: #ff7200;
+        }
+    </style>
+</head>
+<!-- navigation bar -->
+<div class="navigationbar">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../pages/splash.html">
+                <img src="../Img/WebLogo.png" alt="" >
+            </a>
+        </div>
+        <div class="nav-link" id="nav-link">
+            <div class="nav-item"><a href="../Pages/Home.html">Home</a></div>
+            <div class="nav-item"><a href="#">Shop</a></div>
+            <div class="nav-item"><a href="../Pages/gallery.html">Gallery</a></div>
+            <div class="nav-item"><a href="../Pages/team.html">Student Details</a></div>
+            <div class="nav-item"><a href="../Pages/Profile.html">User Profile</a></div>
+            <div class="nav-item"><a href="../Pages/sitemap.html">Site Map</a></div>
+            <div class="nav-item"><a href="../Pages/FeedBack.html">FeedBack</a></div>
+            <div class="nav-item dropdown-head" id="dropdown-head">
+                Content <i class="fa fa-caret-down"></i>
+                <div class="dropdown nav-hide" id="dropdown">
+                    <div class="dropdown-item"><a href="../pages/Content_Student01.html">Student 01</a></div>
+                    <div class="dropdown-item"><a href="../Pages/Content_Student02.html">Student 02</a></div>
+                    <div class="dropdown-item"><a href="../Pages/Content_Student03.html">Student 03</a></div>
+                    <div class="dropdown-item"><a href="../Pages/Content_Student04.html">Student 04</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="burger" id="burger">&#9776;</div>
+    </nav>
+</div>
+
+
+<div class="signup-page">
+    <h2>Sign Up</h2>
+    <form class="signup-form" onsubmit="return signUp()">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <input type="submit" value="Sign Up">
+    </form>
+    <div class="navigation">
+        <a href="../Pages/Profile.html">Home</a>
+        <a href="../Pages/Profile2.html">User Profile</a>
+    </div>
+</div>
+
+<script>
+    function signUp() {
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const phone = document.getElementById('phone').value;
+        const birthdate = document.getElementById('birthdate').value;
+        const address = document.getElementById('address').value;
+
+        sessionStorage.setItem('fullname', fullname);
+        sessionStorage.setItem('email', email);
+        sessionStorage.setItem('password', password);
+        sessionStorage.setItem('phone', phone);
+        sessionStorage.setItem('birthdate', birthdate);
+        sessionStorage.setItem('address', address);
+
+        alert('Sign up successful!');
+        return false; // Prevent form submission
+    }
+</script>
+    
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-left">
+        <img src="../Img/WebLogo.png" alt="">
+        <p class="footer-links">
+            <a href="../Pages/home.html" class="link-1">Home</a>
+            <a href="../Pages/Shop.html">Shop</a>
+            <a href="../Pages/gallery.html">Gallery</a>
+            <a href="../Pages/team.html">Student Details</a>
+            <a href="../Pages/Profile.html">User Profile</a>
+            <a href="../Pages/sitemap.html">Site Map</a>
+  
+        </p>
+  
+        <p class="footer-copy-right">SL DIVING © 2024</p>
+        <div class="page-editor">
+            <a href="../Pages/PageEditor_Student03.html">
+                Page Editor
+            </a>
+        </div>
+    </div>
+  
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>126, Galle Road</span> Colombo 04, Sri Lanka</p>
+        </div>
+  
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+94 112 345 678</p>
+        </div>
+  
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <p><a href="mailto:info@serendipmasks.com">info@sldiving.com</a></p>
+        </div>
+    </div>
+
+    
+  
+    <div class="footer-right">
+        <p class="footer-about">
+            <span>About us</span>
+            We provide high-quality diving products made 
+            from sustainable materials, ideal for daily 
+            wear and protection.
+        </p>
+  
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instergram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+  
+    </div>
+   </footer>
+   <script src="../Js/nav.js"></script>
+    
+</body>
+</html>

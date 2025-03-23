@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Underwater World Profile</title>
+    <link rel="stylesheet" href="../Style/Profile.css">
+    <link rel="stylesheet" href="../Style/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Js/nav.js">
+    <style>
+        /* Additional styles */
+        .profile-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .highlight {
+            animation: highlight 2s;
+        }
+        @keyframes highlight {
+            from { background-color: yellow; }
+            to { background-color: rgba(0, 0, 50, 0.7); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <div class="navigationbar">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../Pages/splash.html">
+                    <img src="../Img/WebLogo.png" alt="" >
+                </a>
+            </div>
+            <div class="nav-link" id="nav-link">
+                <div class="nav-item"><a href="../Pages/Home.html">Home</a></div>
+                <div class="nav-item active"><a href="#">Shop</a></div>
+                <div class="nav-item"><a href="../Pages/gallery.html">Gallery</a></div>
+                <div class="nav-item"><a href="../Pages/team.html">Student Details</a></div>
+                <div class="nav-item"><a href="../Pages/Profile.html">User Profile</a></div>
+                <div class="nav-item"><a href="../Pages/sitemap.html">Site Map</a></div>
+                <div class="nav-item"><a href="../Pages/FeedBack.html">FeedBack</a></div>
+                <div class="nav-item dropdown-head" id="dropdown-head">
+                    Content <i class="fa fa-caret-down"></i>
+                    <div class="dropdown nav-hide" id="dropdown">
+                        <div class="dropdown-item"><a href="../pages/Content_Student01.html">Student 01</a></div>
+                        <div class="dropdown-item"><a href="../Pages/Content_Student02.html">Student 02</a></div>
+                        <div class="dropdown-item"><a href="../Pages/Content_Student03.html">Student 03</a></div>
+                        <div class="dropdown-item"><a href="../Pages/Content_Student04.html">Student 04</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="burger" id="burger">&#9776;</div>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <h1>Explore the <span>Underwater</span><br>World</h1>
+            <p class="par">Dive into the depths of the ocean and discover the amazing<br> marine life and stunning underwater landscapes.</p>
+
+            <!-- Profile Icon -->
+            <a href="../Pages/Profile.html" class="profile-icon">
+                <img src="profile-icon.png" alt="User Profile">
+            </a>
+
+            <button class="cn" onclick="scrollToLogin()">JOIN US</button>
+
+            <div id="login-form" class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="password" placeholder="Enter Password Here">
+                <button class="btnn">Login</button>
+
+                <p class="link">Don't have an account?<br>
+                <a href="../Pages/Profile1.html">Sign up</a> here</p>
+                <p class="liw">Log in with</p>
+                <div class="social-icons">
+                    <a href="#"><img src="../Img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="../Img/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="../Img/instagram.jpeg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../Img/WebLogo.png" alt="">
+            <p class="footer-links">
+                <a href="../Pages/home.html" class="link-1">Home</a>
+                <a href="../Pages/Shop.html">Shop</a>
+                <a href="../Pages/gallery.html">Gallery</a>
+                <a href="../Pages/team.html">Student Details</a>
+                <a href="../Pages/Profile.html">User Profile</a>
+                <a href="../Pages/sitemap.html">Site Map</a>
+            </p>
+            <p class="footer-copy-right">SL DIVING © 2024</p>
+            <div class="page-editor">
+                <a href="../Pages/PageEditor_Student03.html">Page Editor</a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>126, Galle Road</span> Colombo 04, Sri Lanka</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+94 112 345 678</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p><a href="mailto:info@serendipmasks.com">info@sldiving.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-about">
+                <span>About us</span>
+                We provide high-quality diving products made from sustainable materials, ideal for daily wear and protection.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instergram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToLogin() {
+            const loginForm = document.getElementById('login-form');
+            loginForm.scrollIntoView({ behavior: 'smooth' });
+            loginForm.classList.add('highlight');
+            setTimeout(() => {
+                loginForm.classList.remove('highlight');
+            }, 2000);
+        }
+    </script>
+    <script src="../Js/nav.js"></script>
+</body>
+</html>

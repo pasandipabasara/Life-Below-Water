@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile - Underwater World Profile</title>
+    <link rel="stylesheet" href="../Style/Profile.css">
+    <link rel="stylesheet" href="../Style/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Js/nav.js">
+    <style>
+        .profile-page {
+            width: 1000px;
+            margin: auto;
+            padding: 150px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .profile-page h2 {
+            font-family: 'Times New Roman', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .profile-details {
+            width: 600px;
+            margin: auto;
+            background: rgba(0, 0, 50, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .profile-details p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff7200;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .navigation a:hover {
+            background-color: #fff;
+            color: #ff7200;
+        }
+    </style>
+</head>
+<!-- navigation bar -->
+<div class="navigationbar">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../pages/splash.html">
+                <img src="../Img/WebLogo.png" alt="" >
+            </a>
+        </div>
+        <div class="nav-link" id="nav-link">
+            <div class="nav-item"><a href="../Pages/Home.html">Home</a></div>
+            <div class="nav-item"><a href="#">Shop</a></div>
+            <div class="nav-item"><a href="../Pages/gallery.html">Gallery</a></div>
+            <div class="nav-item"><a href="../Pages/team.html">Student Details</a></div>
+            <div class="nav-item"><a href="../Pages/Profile.html">User Profile</a></div>
+            <div class="nav-item"><a href="../Pages/sitemap.html">Site Map</a></div>
+            <div class="nav-item"><a href="../Pages/FeedBack.html">FeedBack</a></div>
+            <div class="nav-item dropdown-head" id="dropdown-head">
+                Content <i class="fa fa-caret-down"></i>
+                <div class="dropdown nav-hide" id="dropdown">
+                    <div class="dropdown-item"><a href="../pages/Content_Student01.html">Student 01</a></div>
+                    <div class="dropdown-item"><a href="../Pages/Content_Student02.html">Student 02</a></div>
+                    <div class="dropdown-item"><a href="../Pages/Content_Student03.html">Student 03</a></div>
+                    <div class="dropdown-item"><a href="../Pages/Content_Student04.html">Student 04</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="burger" id="burger">&#9776;</div>
+    </nav>
+</div>
+
+
+    <div class="profile-page">
+        <h2>User Profile</h2>
+        <div class="profile-details">
+            <p><strong>Name:</strong> <span id="profileName"></span></p>
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="profileBirthdate"></span></p>
+            <p><strong>Address:</strong> <span id="profileAddress"></span></p>
+        </div>
+        <div class="navigation">
+            <a href="../Pages/Profile.html">Home</a>
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fullname = sessionStorage.getItem('fullname');
+            const email = sessionStorage.getItem('email');
+            const phone = sessionStorage.getItem('phone');
+            const birthdate = sessionStorage.getItem('birthdate');
+            const address = sessionStorage.getItem('address');
+
+            if (fullname && email) {
+                document.getElementById('profileName').textContent = fullname;
+                document.getElementById('profileEmail').textContent = email;
+                document.getElementById('profilePhone').textContent = phone || 'Not provided';
+                document.getElementById('profileBirthdate').textContent = birthdate || 'Not provided';
+                document.getElementById('profileAddress').textContent = address || 'Not provided';
+            } else {
+                alert('User data not found. Please sign up.');
+                window.location.href = '../Pages/Profile1.html';
+            }
+        });
+    </script>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-left">
+        <img src="../Img/WebLogo.png" alt="">
+  
+        <p class="footer-links">
+            <a href="../Pages/home.html" class="link-1">Home</a>
+            <a href="../Pages/Shop.html">Shop</a>
+            <a href="../Pages/gallery.html">Gallery</a>
+            <a href="../Pages/team.html">Student Details</a>
+            <a href="../Pages/Profile.html">User Profile</a>
+            <a href="../Pages/sitemap.html">Site Map</a>
+  
+        </p>
+  
+        <p class="footer-copy-right">SL DIVING © 2024</p>
+        <div class="page-editor">
+            <a href="../Pages/PageEditor_Student03.html">
+                Page Editor
+            </a>
+        </div>
+    </div>
+  
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>126, Galle Road</span> Colombo 04, Sri Lanka</p>
+        </div>
+  
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+94 112 345 678</p>
+        </div>
+  
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <p><a href="mailto:info@serendipmasks.com">info@sldiving.com</a></p>
+        </div>
+    </div>
+
+    
+  
+    <div class="footer-right">
+        <p class="footer-about">
+            <span>About us</span>
+            We provide high-quality diving products made 
+            from sustainable materials, ideal for daily 
+            wear and protection.
+        </p>
+  
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instergram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+  
+    </div>
+   </footer>
+   <script src="../Js/nav.js"></script>
+</html>
+
