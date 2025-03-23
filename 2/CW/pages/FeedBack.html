@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../Style/FeedBack.css">
+    
+</head>
+<body>
+   
+    <div class="wrapper">
+        <form id="feedbackForm" action="https://formspree.io/your_email_here" method="POST">
+            <p>
+                <label for="YourName">Enter your name</label>
+                <input type="text" id="YourName" name="YourName" placeholder="Enter name here" autocomplete="on" autofocus required>
+            </p>
+            <p>
+                <label for="YourEmail">Enter your email</label>
+                <input type="email" id="YourEmail" name="YourEmail" placeholder="Enter email here" autocomplete="on">
+            </p>
+            <br>
+            <p>Was this your first time visiting?</p>
+            <p>
+                <input type="radio" id="FirstYes" name="FirstVisit" value="Yes" required>
+                <label for="FirstYes">Yes</label>
+                <input type="radio" id="FirstNo" name="FirstVisit" value="No" required>
+                <label for="FirstNo">No</label>
+            </p>
+            <br>
+            <p>Was this website informative and easy to navigate through?</p>
+            <p>
+                <input type="radio" id="InfoYes" name="Informative" value="Yes" required>
+                <label for="InfoYes">Yes</label>
+                <input type="radio" id="InfoNo" name="Informative" value="No" required>
+                <label for="InfoNo">No</label>
+            </p>
+            <br>
+            <p>If "No" suggest any improvements for future:</p>
+            <p>
+                <textarea id="Message" name="Message" cols="30" rows="5" placeholder="Add your message here"></textarea>
+            </p>
+            <br>
+            <p>How satisfied are you with our services? Choose from 0 to 10:</p>
+            <div class="satisfaction">
+                <div class="satisfaction-row">
+                    <label for="Satisfy1">1</label>
+                    <label for="Satisfy2">2</label>
+                    <label for="Satisfy3">3</label>
+                    <label for="Satisfy4">4</label>
+                    <label for="Satisfy5">5</label>
+                    <label for="Satisfy6">6</label>
+                    <label for="Satisfy7">7</label>
+                    <label for="Satisfy8">8</label>
+                    <label for="Satisfy9">9</label>
+                    <label for="Satisfy10">10</label>
+                </div>
+                <div class="satisfaction-row">
+                    <input type="radio" id="Satisfy1" name="Satisfaction" value="1">
+                    <input type="radio" id="Satisfy2" name="Satisfaction" value="2">
+                    <input type="radio" id="Satisfy3" name="Satisfaction" value="3">
+                    <input type="radio" id="Satisfy4" name="Satisfaction" value="4">
+                    <input type="radio" id="Satisfy5" name="Satisfaction" value="5">
+                    <input type="radio" id="Satisfy6" name="Satisfaction" value="6">
+                    <input type="radio" id="Satisfy7" name="Satisfaction" value="7">
+                    <input type="radio" id="Satisfy8" name="Satisfaction" value="8">
+                    <input type="radio" id="Satisfy9" name="Satisfaction" value="9">
+                    <input type="radio" id="Satisfy10" name="Satisfaction" value="10">
+                </div>
+            </div>
+            <br>
+            <p>Would you recommend our services?</p>
+            <p>
+                <input type="radio" id="RecommendYes" name="Recommend" value="Yes" required>
+                <label for="RecommendYes">Yes</label>
+                <input type="radio" id="RecommendNo" name="Recommend" value="No" required>
+                <label for="RecommendNo">No</label>
+            </p>
+            <br>
+            <p>Would you like to receive updates about the website and any offers?</p>
+            <p>
+                <select id="Platforms" name="Platforms" multiple size="3">
+                    <option value="ViaEmail">Via Email</option>
+                    <option value="ViaFacebook">Via Facebook</option>
+                    <option value="ViaInstagram">Via Instagram</option>
+                </select>
+            </p>
+            <br>
+            <p>Do you have any additional questions or requests?</p>
+            <p>
+                <textarea id="AdditionalMessage" name="AdditionalMessage" cols="30" rows="5" placeholder="Add your message here"></textarea>
+            </p>
+            <br>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+    </div>
+
+    <div id="preview" class="preview">
+        <!-- Preview content will appear here -->
+    </div>
+
+    <div id="confirmation" class="confirmation">
+        <!-- Confirmation message will appear here -->
+    </div>
+
+    <script src="../Js/script.js"></script>
+
+</body>
+</html>
