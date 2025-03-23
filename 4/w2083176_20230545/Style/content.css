@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    
+}
+h1{
+    text-align: center;
+    margin-top: 2px;
+    font-size: 90px;
+    color: #000000f2;
+    border-width: 10cap;
+}
+.content h1{
+    text-align: center;
+    font-size: 50px;
+    color: #d9b1fff2;
+}  
+body {
+    font-family: Arial;
+    font-size: 17px;
+    background-image: url(../Img/diving2.jpg);
+    background-size: 1500px 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.inercontent{
+    margin-left: 655px;
+    text-align: center;
+    width: 800px;
+    background: rgba(0, 0, 0,.6);
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color:  #b1ebf5;
+    margin-top: 100px;
+    
+}  

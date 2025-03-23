@@ -1,0 +1,100 @@
+:root {
+  
+  --yellow: #e2cc20;
+  
+}
+
+.topic {
+  padding-top: 100px;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center ;
+  height: 10vh;
+  color: var(--yellow);
+  background: rgba(0, 0, 0, 0.9);
+  font-weight: 700px;
+
+}
+
+.sitemap {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 4.5px;
+  margin-left: -30px;
+}
+
+rect {
+  fill: rgb(13, 117, 149);
+  stroke: rgb(0, 0, 0);
+  stroke-width: 4px;
+}
+
+rect:hover {
+  fill: rgba(227, 222, 158, 0.7);
+}
+
+#height {
+  height: 90vh; /* Increased height */
+  padding-bottom: 80px; /* Add some padding to the bottom */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-left img {
+  width: 80px;
+}
+
+.footer-links {
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-copy-right {
+  margin: 10px 0;
+}
+
+.page-editor a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-center div {
+  margin: 5px 0;
+}
+
+.footer-center i {
+  margin-right: 5px;
+}
+
+.footer-about {
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.footer-icons a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
